@@ -19,7 +19,11 @@
     "provisioners": [
         {
             "type": "shell",
-            "inline": [ "sleep 30" ]
+            "inline": [ "sleep 1" ]
+        },
+        {
+            "type": "shell",
+            "script": "use_tuna.sh"
         },
         {
             "type": "shell",
@@ -57,7 +61,7 @@
         [
             {
                 "type": "docker-tag",
-                "repository": "jldowns/vatic-docker-contrib",
+                "repository": "longcw/vatic-docker-contrib",
                 "tag": "{{user `version_number`}}"
             },
             {
@@ -70,7 +74,7 @@
         [
             {
                 "type": "docker-tag",
-                "repository": "jldowns/vatic-docker-contrib",
+                "repository": "longcw/vatic-docker-contrib",
                 "tag": "latest"
             },
             {
